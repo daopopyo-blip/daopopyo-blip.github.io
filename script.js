@@ -36,24 +36,6 @@ function showDirection(direction) {
     alert(info);
 }
 
-console.log("Сайт загружен! JavaScript работает.");
-
-function subscribeNews() {
-    let email = document.getElementById('newsEmail').value;
-    if (!email) {
-        alert("Введите email!");
-        return;
-    }
-    
-    // Простая проверка, что email похож на email
-    if (!email.includes('@') || !email.includes('.')) {
-        alert("Введите корректный email (например: name@mail.ru)");
-        return;
-    }
-    
-    alert("✅ Спасибо! Вы подписаны на новости.");
-    document.getElementById('newsEmail').value = "";
-}
 // ПОДПИСКА НА НОВОСТИ
 function subscribeNews() {
     let email = document.getElementById('newsEmail').value;
