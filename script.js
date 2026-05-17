@@ -51,9 +51,6 @@ function subscribeNews() {
     document.getElementById('newsEmail').value = "";
 }
 
-    alert("✅ Спасибо! Вы подписаны на новости.");
-    document.getElementById('newsEmail').value = "";
-
 // КНОПКА "НАВЕРХ"
 window.addEventListener('scroll', function() {
     let goTop = document.querySelector('.go-top');
