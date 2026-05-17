@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Школа искусств "Вдохновение"</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎨%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ШАПКА -->
+<div class="header">
+    <div class="logo">
+        <a href="index.html">🎨 Школа искусств "Вдохновение"</a>
+    </div>
+    <ul class="nav">
+        <li><a href="index.html">Главная</a></li>
+        <li class="has-dropdown">
+            <a href="#">Направления</a>
+            <ul class="dropdown">
+                <li><a href="#" onclick="showDirection('Рисование')">🎨 Рисование</a></li>
+                <li><a href="#" onclick="showDirection('Музыка')">🎵 Музыка</a></li>
+            </ul>
+        </li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+</div>
+
+<!-- БАННЕР -->
+<div class="banner">
+    <h1>Школа искусств <span>"Вдохновение"</span></h1>
+    <p>Рисование • Музыка</p>
+    <button class="banner-btn" onclick="zapisatsya()">🎨 Записаться</button>
+</div>
+
+
+<!-- НАПРАВЛЕНИЯ -->
+<div class="directions">
+    <h2 class="section-title">Наши направления</h2>
+    <div class="cards">
+        
+        <div class="card">
+            <div class="card-icon">🎨</div>
+            <h3>Изобразительное искусство</h3>
+            <p>Рисунок, живопись, композиция, графика. Развиваем художественный вкус и технику.</p>
+            <button class="card-btn" onclick="zapisatsya()">Записаться</button>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🎵</div>
+            <h3>Музыка</h3>
+            <p>Фортепиано, гитара, скрипка, вокал. Индивидуальный подход к каждому ученику.</p>
+            <button class="card-btn" onclick="zapisatsya()">Записаться</button>
+        </div>
+ </div>
+</div>
+
+<!-- ПОДПИСКА НА НОВОСТИ -->
+<section class="newsletter">
+    <h2>Подпишитесь на новости</h2>
+    <p>Будьте в курсе новых занятий, конкурсов и мероприятий</p>
+    <div class="newsletter-form">
+        <input type="email" id="newsEmail" placeholder="Ваш email">
+        <button onclick="subscribeNews()">Подписаться</button>
+    </div>
+</section>
+<!-- КНОПКА "НАВЕРХ" -->
+<div class="go-top" onclick="scrollToTop()">↑</div>
+
+<!-- ПРЕИМУЩЕСТВА -->
+<div class="advantages">
+    <h2>Почему выбирают нас</h2>
+    <div class="advantages-grid">
+        <div class="advantage-item">
+            <div class="advantage-icon">🎓</div>
+            <h3>Опытные преподаватели</h3>
+            <p>Дипломированные специалисты с большим стажем</p>
+        </div>
+        <div class="advantage-item">
+            <div class="advantage-icon">🏆</div>
+            <h3>Участие в конкурсах</h3>
+            <p>Ежегодно участвуем в городских и международных конкурсах</p>
+        </div>
+        <div class="advantage-item">
+            <div class="advantage-icon">🎭</div>
+            <h3>Выставки и концерты</h3>
+            <p>Регулярные отчётные мероприятия для родителей</p>
+        </div>
+        <div class="advantage-item">
+            <div class="advantage-icon">📜</div>
+            <h3>Сертификаты выпускникам</h3>
+            <p>По окончании курсов выдаём сертификаты</p>
+        </div>
+    </div>
+</div>
+
+<!-- РАСПИСАНИЕ -->
+<div class="schedule">
+    <h2>Расписание занятий</h2>
+    <div class="schedule-grid">
+        <div class="schedule-item">
+            <div class="schedule-day">Понедельник / Среда</div>
+            <div class="schedule-lessons">
+                <p>🎨 Рисование: 16:00 - 17:30</p>
+            </div>
+        </div>
+        <div class="schedule-item">
+            <div class="schedule-day">Вторник / Четверг</div>
+            <div class="schedule-lessons">
+                <p>🎵 Музыка: 17:00 - 18:00</p>
+            </div>
+        </div>
+        <div class="schedule-item">
+            <div class="schedule-day">Суббота</div>
+            <div class="schedule-lessons">
+                <p>🎨 Рисование: 11:00 - 12:30</p>
+                <p>🎵 Музыка: 12:00 - 13:00</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ЦЕНЫ -->
+<div class="prices">
+    <h2>Стоимость обучения</h2>
+    <div class="prices-grid">
+        <div class="price-card">
+            <h3>Пробное занятие</h3>
+            <div class="price">0 ₽</div>
+            <p>Первое занятие бесплатно</p>
+            <button class="price-btn" onclick="zapisatsya()">Записаться</button>
+        </div>
+        <div class="price-card popular">
+            <div class="popular-badge">Популярное</div>
+            <h3>Абонемент на месяц</h3>
+            <div class="price">2 500 ₽</div>
+            <p>8 занятий в месяц</p>
+            <button class="price-btn" onclick="zapisatsya()">Выбрать</button>
+        </div>
+        <div class="price-card">
+            <h3>Индивидуальные занятия</h3>
+            <div class="price">1 500 ₽</div>
+            <p>1 занятие с преподавателем</p>
+            <button class="price-btn" onclick="zapisatsya()">Записаться</button>
+        </div>
+    </div>
+</div>
+<!-- РАБОТЫ УЧЕНИКОВ -->
+<div class="gallery">
+    <h2>Работы наших учеников</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTADjcqVXEUpSbdWlk5-Wp5XbEi23LJBQRW7A&s" alt="Рисунок" class="gallery-img">
+            <p>"Летний пейзаж"</p>
+            <span>Анна, 10 лет</span>
+        </div>
+        <div class="gallery-item">
+            <img src="https://img.freepik.com/free-vector/hand-drawn-chalk-illustration_52683-130947.jpg?semt=ais_hybrid&w=740&q=80" alt="Натюрморт" class="gallery-img">
+            <p>"Натюрморт"</p>
+            <span>Максим, 12 лет</span>
+        </div>
+        <div class="gallery-item">
+            <img src="https://avatars.mds.yandex.net/get-mpic/12718223/2a00000194fa34d675f32b49f6535e6e5df4/orig" alt="Море" class="gallery-img">
+            <p>"Море"</p>
+            <span>София, 9 лет</span>
+        </div>
+    </div>
+</div>
+
+<!-- ПРЕПОДАВАТЕЛИ -->
+<section class="teachers">
+    <h2>Наши преподаватели</h2>
+    <div class="teachers-grid">
+        
+        <!-- Преподаватель по рисованию -->
+        <div class="teacher-card">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Преподаватель рисования" class="teacher-img">
+            <h3>Елена Васильевна</h3>
+            <p>🎨 Преподаватель по рисованию</p>
+            <div class="teacher-desc">Художник, педагогический стаж 15 лет. Обучает рисунку, живописи, композиции.</div>
+        </div>
+
+        <!-- Преподаватель по музыке -->
+        <div class="teacher-card">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Преподаватель музыки" class="teacher-img">
+            <h3>Дмитрий Петрович</h3>
+            <p>🎵 Преподаватель по музыке</p>
+            <div class="teacher-desc">Пианист, стаж 10 лет. Обучает игре на фортепиано, гитаре, вокалу.</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ОТЗЫВЫ -->
+<div class="reviews">
+    <h2>Отзывы наших учеников</h2>
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="review-text">"За год научилась рисовать с нуля! Преподаватели очень внимательные. Спасибо школе!"</div>
+            <div class="review-author">— Анна, 12 лет</div>
+        </div>
+        <div class="review-card">
+            <div class="review-text">"Ребёнок ходит с удовольствием на танцы. Стал более раскрепощённым и уверенным."</div>
+            <div class="review-author">— Елена, мама ученицы</div>
+        </div>
+        <div class="review-card">
+            <div class="review-text">"Отличная атмосфера, профессиональные педагоги. Рекомендую!"</div>
+            <div class="review-author">— Михаил, папа ученика</div>
+        </div>
+    </div>
+</div>
+
+<!-- ПОДВАЛ -->
+<div class="footer">
+    <p>© 2026 Школа искусств "Вдохновение"</p>
+</div>
+
+
+
+<script src="script.js"></script>
+<script>
+</script>
+</body>
+</html>
